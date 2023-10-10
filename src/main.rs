@@ -5,6 +5,7 @@ extern "C" {
 mod net;
 mod sound;
 mod video;
+mod wad;
 
 fn main() {
     unsafe {

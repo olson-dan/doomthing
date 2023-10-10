@@ -1,4 +1,6 @@
 fn main() {
+    println!("cargo:rerun-if-changed=build.rs");
+    println!("cargo:rerun-if-changed=doom/*.c");
     cc::Build::new()
         .file("doom/am_map.c")
         .file("doom/d_items.c")
@@ -56,7 +58,6 @@ fn main() {
         .file("doom/tables.c")
         .file("doom/v_video.c")
         .file("doom/wi_stuff.c")
-        .file("doom/w_wad.c")
         .file("doom/z_zone.c")
         .define("NORMALUNIX", "")
         .define("LINUX", "")
